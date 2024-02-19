@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+
+input {
+  @apply pl-[16px] outline-none;
+}
+
+* {
+  @apply p-0 m-0 box-border select-none;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.hiddenSection {
+  @apply invisible absolute -z-[10] w-0 h-0 overflow-hidden;
+}
+.pdfHiddenSection {
+  @apply invisible absolute -z-[10] overflow-hidden;
+}
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+.signInput::placeholder {
+  @apply text-[#BDBDBD];
+}
+.loginInput::placeholder {
+  @apply text-[12px] text-[#595ED3CC];
+}
+
+.loginInput {
+  @apply w-full px-[10px] py-[6px] rounded-[5px] border;
+}
+
+.featureList + .featureList {
+  @apply mt-[8px];
+}
+
+.cardStyle {
+  @apply flex flex-col w-[234px] min-h-[380px] px-[38px] pt-[20px] rounded-[30px] rounded-br-[2px] bg-[#ffffff80] hover:shadow-[0_4px_32px_rgba(178,167,209,0.5)] transition-all ease-in-out duration-500;
+}
+
+.cardStyle + .cardStyle {
+  @apply ml-[40px];
+}
+
+.signCard + .signCard {
+  @apply ml-[14px] mt-0 lg:mt-[14px] lg:ml-0;
+}
+
+.signCard:hover button {
+  @apply opacity-100;
+}
+
+/* customized scroll bar */
+.ctr-scrollbar::-webkit-scrollbar {
+  @apply w-1 h-1 mr-1 bg-transparent;
+}
+.ctr-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-[#BDBDBD] rounded-full;
+}
+
+.dragover {
+  @apply bg-[#E3FEC733];
+}
+
+.colorPicker + .colorPicker {
+  @apply ml-[12px];
+}
+
+.animation {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.messageBox {
+  @apply flex-center fixed top-12 left-1/2 h-[40px] rounded-lg text-[16px] text-center z-50;
+  transition-duration: 0.4s;
+}
+
+.messageBox--open {
+  @apply opacity-90;
+}
+
+.messageBox--close {
+  @apply opacity-0 pointer-events-none;
+}
+
+.extension-selector + .extension-selector {
+  @apply ml-[32px];
+}
+/* .animationProgress {
+  animation: zeroToStep4 2s linear forwards;
+} */
+
+.loadingAnimation {
+  animation-name: opacity;
+  animation-duration: 1.2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.radio-container > section + section {
+  @apply ml-[20px];
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 70%;
+  }
+}
+
+@keyframes zeroToStep1 {
+  0%
+  {
+    stroke-dashoffset: -901.4;
+  }
+  100%
+  {
+    stroke-dashoffset: -710;
+  }
+}
+
+@keyframes zeroToStep2 {
+  0%
+  {
+    stroke-dashoffset: -901.4;
+  }
+  100%
+  {
+    stroke-dashoffset: -460;
+  }
+}
+
+@keyframes zeroToStep3 {
+  0%
+  {
+    stroke-dashoffset: -901.4;
+  }
+  100%
+  {
+    stroke-dashoffset: -210;
+  }
+}
+@keyframes zeroToStep4 {
+  0%
+  {
+    stroke-dashoffset: -901.4;
+  }
+  100%
+  {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes step0ToStep1 {
+  0%
+  {
+    stroke-dashoffset: -901.4;
+  }
+  100%
+  {
+    stroke-dashoffset: -710;
+  }
+}
+@keyframes step1ToStep2 {
+  0%
+  {
+    stroke-dashoffset: -710;
+  }
+  100%
+  {
+    stroke-dashoffset: -460;
+  }
+}
+@keyframes step2ToStep1 {
+  0%
+  {
+    stroke-dashoffset: -460;
+  }
+  100%
+  {
+    stroke-dashoffset: -710;
+  }
+}
+@keyframes step2ToStep3 {
+  0%
+  {
+    stroke-dashoffset: -460;
+  }
+  100%
+  {
+    stroke-dashoffset: -210;
+  }
+}
+@keyframes step3ToStep2 {
+  0%
+  {
+    stroke-dashoffset: -210;
+  }
+  100%
+  {
+    stroke-dashoffset: -460;
+  }
+}
+@keyframes step3ToStep4 {
+  0%
+  {
+    stroke-dashoffset: -210;
+  }
+  100%
+  {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes step4ToStep3 {
+  0%
+  {
+    stroke-dashoffset: 0;
+  }
+  100%
+  {
+    stroke-dashoffset: -210;
+  }
+}
+
+@keyframes step4ToStep2 {
+  0%
+  {
+    stroke-dashoffset: 0;
+  }
+  100%
+  {
+    stroke-dashoffset: -460;
+  }
+}
